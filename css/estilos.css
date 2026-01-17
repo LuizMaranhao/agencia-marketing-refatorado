@@ -1,0 +1,43 @@
+:root {
+    --bg-deep: #020617;
+    --bg-card: #0f172a;
+    --accent: #38bdf8;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: var(--bg-deep); color: var(--text-main); line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+.section-padding { padding: 80px 0; }
+
+/* HEADER */
+.header { height: 80px; display: flex; align-items: center; position: sticky; top: 0; background: rgba(2,6,23,0.9); z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.header__container { display: flex; justify-content: space-between; width: 100%; align-items: center; }
+.header__logo { font-weight: 800; font-size: 1.5rem; text-decoration: none; color: white; }
+.header__logo--span { color: var(--accent); }
+.header__nav-list { display: flex; list-style: none; gap: 2rem; }
+.header__nav-link { color: var(--text-muted); text-decoration: none; transition: 0.3s; }
+.header__nav-link:hover, .header__nav-link--active { color: var(--accent); }
+
+/* HERO */
+.hero { height: 80vh; display: flex; align-items: center; text-align: center; }
+.hero__title { font-size: 3.5rem; margin-bottom: 1rem; }
+.hero__title--gradient { background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero__description { max-width: 600px; margin: 0 auto 2rem; color: var(--text-muted); }
+
+/* ABOUT GRID */
+.about__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.about__img { width: 100%; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+.about__list { list-style: none; color: var(--accent); margin-top: 1rem; }
+
+/* CARDS */
+.card { background: var(--bg-card); border-radius: 15px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
+.card:hover { transform: translateY(-10px); border-color: var(--accent); }
+.card__img { width: 100%; height: 200px; object-fit: cover; }
+.card__body { padding: 1.5rem; }
+
+/* FORM */
+.contact-card { background: var(--bg-card); padding: 2.5rem; border-radius: 15px; }
+.form__input, .form__textarea { width: 100%; padding: 1rem; background: #1e293b; border: 1px solid #334155; color: white; border-radius: 8px; margin-bottom: 1rem; }
+.btn--primary { background: var(--accent); padding: 1rem 2rem; border-radius: 8px; color: var(--bg-deep); font-weight: 700; text-decoration: none; display: inline-block; cursor: pointer; }
