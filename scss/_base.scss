@@ -1,0 +1,45 @@
+@use 'variaveis' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $preto-profundo;
+  color: $branco-puro;
+  font-family: $fonte;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 100px 10%;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 18px;
+}
+
+a {
+  color: $branco-puro;
+  text-decoration: none;
+  transition: .3s;
+}
+
+a:hover {
+  color: $azul-neon;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: .8s cubic-bezier(.2,.8,.2,1);
+}
